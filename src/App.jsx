@@ -22,6 +22,11 @@ import AdminLogin from "./pages/AdminLogin";
 import Admin from "./pages/Admin";
 import AdminProducts from "./pages/AdminProducts";
 import AdminOrders from "./pages/AdminOrders";
+import About from "./pages/About";
+import Owner from "./pages/Owner";
+import FloatingButtons from "./components/FloatingButtons";
+import DeliveryTracking from "./pages/DeliveryTracking";
+import AdminCustomers from "./pages/AdminCustomers";
 
 function ProtectedRoute({ children }) {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -43,19 +48,19 @@ function App() {
   const location = useLocation();
 
   const hideLayout = [
-    "/",
-    "/login",
-    "/register",
-    "/forgot-password",
-    "/otp",
-    "/verify-age",
-    "/access-denied",
-    "/admin-login",
-    "/admin",
-    "/admin-products",
-    "/admin-orders",
-  ].includes(location.pathname);
-
+  "/",
+  "/login",
+  "/register",
+  "/forgot-password",
+  "/otp",
+  "/verify-age",
+  "/access-denied",
+  "/admin-login",
+  "/admin",
+  "/admin-products",
+  "/admin-orders",
+  "/admin-customers",
+].includes(location.pathname);
   return (
     <>
       {!hideLayout && <Navbar />}
@@ -71,6 +76,8 @@ function App() {
         <Route path="/access-denied" element={<AccessDenied />} />
 
         <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/owner" element={<Owner />} />
 
         <Route
           path="/admin"
@@ -98,6 +105,14 @@ function App() {
             </AdminProtectedRoute>
           }
         />
+        <Route
+  path="/admin-customers"
+  element={
+    <AdminProtectedRoute>
+      <AdminCustomers />
+    </AdminProtectedRoute>
+  }
+/>
 
         <Route
           path="/home"
@@ -152,6 +167,14 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+           path="/tracking"
+           element={
+            <ProtectedRoute>
+              <DeliveryTracking />
+            </ProtectedRoute>
+            }
+        />
 
         <Route
           path="/profile"
@@ -166,6 +189,7 @@ function App() {
       </Routes>
 
       {!hideLayout && <Footer />}
+      {!hideLayout && <FloatingButtons />}
     </>
   );
 }

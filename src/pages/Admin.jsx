@@ -90,9 +90,12 @@ const cancelledOrders = orders.filter(
             🍾 Products
           </button>
 
-          <button className="w-full text-left hover:text-yellow-400">
-            👥 Customers
-          </button>
+          <button
+  onClick={() => navigate("/admin-customers")}
+  className="w-full text-left hover:text-yellow-400"
+>
+  👥 Customers
+</button>
 
           <button
             onClick={handleLogout}

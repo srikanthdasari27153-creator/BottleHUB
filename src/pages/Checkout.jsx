@@ -159,8 +159,9 @@ function Checkout() {
           }
 
           alert("🎉 Payment Successful & Order Placed!");
-
-          navigate("/");
+          setTimeout(() => {
+            navigate("/tracking");
+          }, 2000);
         } catch (error) {
           console.log(error);
           alert("Order Save Failed!");
