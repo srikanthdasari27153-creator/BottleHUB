@@ -45,10 +45,10 @@ function AdminOrders() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex">
+    <div className="min-h-screen bg-black text-white flex flex-col md:flex-row">
 
       {/* Sidebar */}
-      <div className="w-64 bg-zinc-900 border-r border-yellow-500 p-6">
+      <div className="w-full md:w-64 bg-zinc-900 border-b md:border-b-0 md:border-r border-yellow-500 p-6">
         <h1 className="text-3xl font-bold text-yellow-400">
           🍾 BottleHub
         </h1>
@@ -95,7 +95,7 @@ function AdminOrders() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-8">
+      <div className="flex-1 p-4 md:p-8">
 
         <h1 className="text-4xl font-bold text-yellow-400 mb-8">
           Orders

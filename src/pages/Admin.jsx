@@ -60,9 +60,9 @@ const cancelledOrders = orders.filter(
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex">
+    <div className="min-h-screen bg-black text-white flex flex-col md:flex-row">
       {/* Sidebar */}
-      <div className="w-64 bg-zinc-900 border-r border-yellow-500 p-6">
+      <div className="w-64 bg-zinc-900 border-b md:border-b-0 md:border-r border-yellow-500 p-6">
         <h1 className="text-3xl font-bold text-yellow-400">
           🍾 BottleHub
         </h1>
@@ -107,7 +107,7 @@ const cancelledOrders = orders.filter(
       </div>
 
       {/* Main */}
-      <div className="flex-1 p-10">
+      <div className="flex-1 p-4 md:p-10 overflow-x-hidden">
         <h1 className="text-4xl font-bold text-yellow-400">
           Dashboard
         </h1>
@@ -182,7 +182,7 @@ const cancelledOrders = orders.filter(
               No Orders Available
             </div>
           ) : (
-            <div className="overflow-x-auto rounded-xl">
+            <div className="overflow-x-auto rounded-xl w-full">
               <table className="w-full bg-zinc-900">
                 <thead className="bg-yellow-500 text-black">
                   <tr>
