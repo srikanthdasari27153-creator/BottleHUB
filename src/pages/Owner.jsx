@@ -1,4 +1,4 @@
-import Owner2 from "../assets/Owner2.jpg";
+import owner from "../assets/Owner.jpg";
 import {
   FaPhoneAlt,
   FaWhatsapp,
