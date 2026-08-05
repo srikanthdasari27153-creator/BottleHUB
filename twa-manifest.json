@@ -1,6 +1,6 @@
 {
   "packageId": "app.vercel.bottle_hub_vert.twa",
-  "host": "com.bottlehub.app",
+  "host": "bottle-hub-vert.vercel.app",
   "name": "BottleHub",
   "launcherName": "BottleHub",
   "display": "standalone",
@@ -13,12 +13,11 @@
   "backgroundColor": "#000000",
   "enableNotifications": true,
   "startUrl": "/home",
-  "iconUrl": "https://bottle-hub-vert.vercel.app/",
+  "iconUrl": "https://bottle-hub-vert.vercel.app/icons/icon-512.png",
   "maskableIconUrl": "https://bottle-hub-vert.vercel.app/icons/icon-512.png",
-  "monochromeIconUrl": "https://bottle-hub-vert.vercel.app/icons/icon-512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
-    "path": "android.keystore",
+    "path": "/Users/srikanthnaidu/Desktop/BottleHub/android.keystore",
     "alias": "android"
   },
   "appVersionName": "1",

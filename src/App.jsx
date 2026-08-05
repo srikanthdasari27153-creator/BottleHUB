@@ -66,7 +66,7 @@ function App() {
       {!hideLayout && <Navbar />}
 
       <Routes>
-        <Route path="/" element={<SplashScreen />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />

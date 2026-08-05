@@ -22,7 +22,7 @@ plugins {
 
 def twaManifest = [
     applicationId: 'app.vercel.bottle_hub_vert.twa',
-    hostName: 'com.bottlehub.app', // The domain being opened in the TWA.
+    hostName: 'bottle-hub-vert.vercel.app', // The domain being opened in the TWA.
     launchUrl: '/home', // The start path for the TWA. Must be relative to the domain.
     name: 'BottleHub', // The application name.
     launcherName: 'BottleHub', // The name shown on the Android Launcher.
